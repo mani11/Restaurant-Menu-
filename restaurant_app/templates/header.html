@@ -1,0 +1,40 @@
+<head>
+    <link rel=stylesheet type=text/css href="{{url_for('static',filename='header.css')}}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<div class="header-bar">
+    <a class="home-icon" href="{{url_for('getAllRestaurants')}}"><i class="fas fa-home"></i></a>
+
+    {% if 'username' in login_session %}
+    <a class="login-btn" href="{{url_for('disconnect')}}">Logout</a>
+    {% else %}
+    <a class="login-btn" href="{{url_for('showLogin')}}">Login</a>
+    {% endif %}
+
+</div>
+<div class="image-container">
+    <div class="opaque-container">
+        <div>
+            <image name="profile-pic" class="user-image"></image>
+            <p name="user" class="user-name"></p>
+            <!-- <p>{{session}}</p>
+            <p>{{login_session}}</p> -->
+            {% if 'username' in login_session %}
+            <script>
+                var username = {{ login_session['username']| tojson}};
+                var picture = {{ login_session['picture']| tojson}};
+                $('.user-image').attr('src', picture);
+                $('.user-name').text('Welcome ' + username);
+            </script>
+            {% else %}
+            <script>
+                $('.user-image').attr('src', "../static/guest_user.jpg");
+                $('.user-name').text('Welcome Guest');
+            </script>
+            {% endif %}
+            <script>
+            </script>
+        </div>
+    </div>
+</div>

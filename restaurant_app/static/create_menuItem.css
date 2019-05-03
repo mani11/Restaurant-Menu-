@@ -1,0 +1,18 @@
+.content-wrapper{
+background-color: white
+}
+.content{
+    padding:2rem;
+}
+.align-items{
+    margin-bottom:1rem;
+}
+.create-btn{
+    color: white;
+    background-color: rgb(245, 97, 97);
+    padding: 1rem;
+    width: 25rem;
+    border-radius: 5px;
+    font-family: 'Itim', cursive;
+    font-size:large;
+}

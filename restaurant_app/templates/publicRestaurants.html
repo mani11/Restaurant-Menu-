@@ -1,0 +1,29 @@
+<!DOCTYPE>
+<html>
+<head>
+    <link rel=stylesheet type=text/css href="{{url_for('static',filename='restaurant.css')}}">
+</head>
+
+<body>
+    {% extends "main.html" %}
+    {% block content %}
+    <header>
+        {% include "header.html" %}
+    </header>
+
+    <main>
+        <div class="content-wrapper">
+            <h2 class="heading-font">Restaurants</h2>
+            {% for r in restaurants %}
+            <a class="restaurant-name" href="{{url_for('getAllMenuItemsForRestaurants',restaurant_id = r.id)}}">
+                <div class="content">
+                    {{r.name}}
+                </div>
+            </a>
+            {% endfor %}
+    </main>
+    </div>
+    {% endblock%}
+</body>
+
+</html>

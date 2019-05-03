@@ -1,0 +1,9 @@
+body{
+    margin:0;
+    box-sizing: border-box;
+}
+.content-wrapper{
+    width:950px;
+    margin:0 auto;
+    text-align:center;
+}

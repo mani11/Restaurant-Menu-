@@ -1,0 +1,113 @@
+<!DOCTYPE>
+<html>
+
+
+<head>
+    <link rel=stylesheet type=text/css href="{{url_for('static',filename='menuItem.css')}}">
+</head>
+
+<body>
+    {% extends "main.html" %}
+    {% block content %}
+
+    <header>
+        {% include "header.html" %}
+    </header>
+    <div class="content-wrapper">
+        <main>
+            <div class="content">
+                <h2 class="heading-font">{{ restaurant.name }}</h2>
+                <a href="{{url_for('AddMenuItem',restaurant_id = restaurant.id)}}">
+                    <button class="create-btn">Add MenuItem</button>
+                </a>
+                <section>
+                    <div class="col-wide">
+                        <div class="appetizers">
+                            <h3>Appetizers</h3>
+                            {% for i in menuItems %}
+                            {% if i.course == 'Appetizer' %}
+                            <div class="menu-content">
+                                <p class="name">{{i.name}}</p>
+                                <p><i>{{i.description}}</i></p>
+                                <p>{{i.price}}</p>
+                                <a href="{{url_for('editMenuItem',menuItem_id = i.id,restaurant_id = restaurant.id)}}"><i
+                                        class="far fa-edit"></i></a>
+                                <a
+                                    href="{{url_for('deleteMenuItem',menuItem_id = i.id,restaurant_id = restaurant.id)}}"><i
+                                        class="far fa-trash-alt"></i></a>
+                                <br>
+                            </div>
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="entre">
+                            <h3>Entree</h3>
+                            {% for i in menuItems %}
+                            {% if i.course == 'Entree' %}
+                            <div class="menu-content">
+                                <p class="name">{{i.name}}</p>
+                                <p><i>{{i.description}}</i></p>
+                                <p>{{i.price}}</p>
+                                <a href="{{url_for('editMenuItem',menuItem_id = i.id,restaurant_id = restaurant.id)}}"><i
+                                        class="far fa-edit"></i></a>
+
+                                <a
+                                    href="{{url_for('deleteMenuItem',menuItem_id = i.id,restaurant_id = restaurant.id)}}"><i
+                                        class="far fa-trash-alt"></i></a>
+                                <br>
+                            </div>
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="dessert">
+                            <h3>Dessert</h3>
+                            {% for i in menuItems %}
+                            {% if i.course == 'Dessert' %}
+                            <div class="menu-content">
+                                <p class="name">{{i.name}}</p>
+                                <p><i>{{i.description}}</i></p>
+                                <p>{{i.price}}</p>
+                                <a href="{{url_for('editMenuItem',menuItem_id = i.id,restaurant_id = restaurant.id)}}"><i
+                                        class="far fa-edit"></i></a>
+
+                                <a
+                                    href="{{url_for('deleteMenuItem',menuItem_id = i.id,restaurant_id = restaurant.id)}}"><i
+                                        class="far fa-trash-alt"></i></a>
+                                <br>
+                            </div>
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </section>
+                <aside>
+                    <div class="col-narrow">
+                        <div class="beverage">
+                            <h3>Beverage</h3>
+                            {% for i in menuItems %}
+                            {% if i.course == 'Beverage' %}
+                            <div class="menu-content">
+                                <p class="name">{{i.name}}</p>
+                                <p><i>{{i.description}}</i></p>
+                                <p>{{i.price}}</p>
+                                <a href="{{url_for('editMenuItem',menuItem_id = i.id,restaurant_id = restaurant.id)}}"><i
+                                        class="far fa-edit"></i></a>
+
+                                <a
+                                    href="{{url_for('deleteMenuItem',menuItem_id = i.id,restaurant_id = restaurant.id)}}"><i
+                                        class="far fa-trash-alt"></i></a>
+                                <br>
+                            </div>
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </aside>
+            </div>
+
+        </main>
+    </div>
+    {% endblock%}
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <title>Restaurant Menu</title>
+
+    <link rel=stylesheet type=text/css href="{{url_for('static',filename='delete_restaurant.css')}}">
+</head>
+
+<body>
+    {% extends "main.html" %}
+    {% block content %}
+    <header>
+        {% include "header.html" %}
+    </header>
+    <main>
+        <div class="content-wrapper">
+            <div class="content">
+                <form action="{{url_for('deleteRestaurant',restaurant_id = restaurant.id)}}" method='post'>
+                    <h3 class="heading-font">Are you sure you want to delete <b>{{restaurant.name}} ?</b></h3>
+                            <input class="update-btn" type='submit' value='Delete'>
+                </form>
+            </div>
+        </div>
+    </main>
+    {% endblock%}
+</body>
+
+</html>

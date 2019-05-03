@@ -1,0 +1,69 @@
+body{
+    box-sizing: border-box;
+    margin:0;
+}
+header{
+    text-align:center;
+}
+header h1{
+    margin:0;
+    padding:1rem;
+}
+.content-wrapper{
+    width: 950px;
+    margin:0 auto;
+    }
+  
+    .col-wide{
+        width:70%;
+        float:left;
+        text-align:left;
+    }
+    .col-narrow{
+        width:30%;
+        float:right;
+        text-align:left;
+    }
+    .content{
+        clear:both;
+        overflow:auto;
+    }
+    .menu-content{
+        padding: 1rem;
+        margin-left:1rem;
+    }
+.menu-content p{
+    margin:0;
+    font-family: 'Itim', cursive;
+    padding-bottom: 0.3rem;
+}
+.menu-content a{
+    color:rgb(245, 97, 97);
+}
+.menu-content .name{
+    color:rgb(245, 97, 97);
+}
+.menu-content:hover{
+    background-color:rgb(255,177,177);
+    color:white;
+    }
+.appetizers h3, .entre h3, .dessert h3,.beverage h3{
+    font-family: 'Architects Daughter', cursive;
+    padding-left:1rem;
+    padding-top:1rem;
+    margin:0;
+}
+
+.heading-font{
+    font-family: 'Architects Daughter', cursive;
+    color:rgb(245, 97, 97);
+}
+.create-btn{
+    color: white;
+    background-color: rgb(245, 97, 97);
+    padding: 1rem;
+    width: 25rem;
+    border-radius: 5px;
+    font-family: 'Itim', cursive;
+    font-size:large;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <title>Restaurant Menu</title>
+    <link rel=stylesheet type=text/css href="{{url_for('static',filename='edit_restaurant.css')}}">
+</head>
+
+<body>
+    {% extends "main.html" %}
+    {% block content %}
+    <header>
+            {% include "header.html" %}
+        </header>
+   <div class="content-wrapper">
+        <div class="content">
+                <form action="{{url_for('editRestaurant',restaurant_id = restaurant.id)}}" method='post'></form>
+                        <div class="form-group">
+                          <label class="input-label"for="restaurant-name">Name</label>
+                          <input type="email" class="form-control" id="restaurant-name" placeholder='{{restaurant.name}}'>
+                        </div>
+                        <button type="submit" class="update-btn">Update</button>
+                        </form>
+            <!-- <form action="{{url_for('editRestaurant',restaurant_id = restaurant.id)}}" method='post'>
+                <input class="align-item" type='text' name='name' placeholder='{{restaurant.name}}'>
+                <br>
+                <input type="submit" value="update" class="align-item">
+        </div>
+        </form> -->
+    </div>
+</div>
+    {% endblock%}
+</body>
+
+</html>

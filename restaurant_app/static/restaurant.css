@@ -1,0 +1,59 @@
+/*
+restaurant.html
+*/
+header h1{
+    margin:0;
+    padding:1rem;
+}
+.content-wrapper{
+    text-align:center;
+    background-color: #ffffff;
+    color:rgb(245, 97, 97);
+} 
+.col-narrow{
+width:30%;
+float:right;
+}
+.col-wide{
+width:70%;
+float:left;
+}
+.content{
+clear:both;
+padding:1rem;
+}
+.content:hover{
+    background-color:rgb(255,177,177);
+   
+}
+.content:hover a{
+    color:#ffffff;
+}
+div.col-narrow a{
+    padding:0 1rem;
+}
+.heading-font{
+    font-family: 'Architects Daughter', cursive;
+}
+.restaurant-name{
+    color: black;
+    text-decoration: none;
+    margin-right: 1rem;
+    font-family: 'Itim', cursive;
+
+}
+.edit-restaurant{
+    color: black;
+}
+.delete-restaurant{
+    color: black;
+}
+.add-restaurant-btn{
+    color: white;
+    background-color: rgb(245, 97, 97);
+    padding: 1rem;
+    width: 25rem;
+    border-radius: 5px;
+    font-family: 'Itim', cursive;
+    font-size:large;
+}

@@ -1,0 +1,42 @@
+/*
+Login header
+*/
+.header-bar{
+    height:40px;
+    background-color:rgb(245, 97, 97);
+    color:#ffffff;
+}
+.home-icon{
+display:inline-block;
+margin-top:0.6rem;
+color:white;
+float:left;
+margin-left:1rem;
+}
+.login-btn{
+    display:inline-block;
+    margin-top:0.6rem;
+    color:white;
+    float:right;
+    margin-right:1rem;
+    text-decoration: none;
+    font-family: 'Itim', cursive;
+}
+.image-container{
+background-image: url("../static/restaurant.jpg");
+height:200px;
+background-size: cover;
+text-align:center;
+font-family: 'Itim', cursive;
+}
+.opaque-container{
+    background-color: rgba(255,255,255,0.4);
+    padding: 2rem;
+    position:relative;
+    top:3rem;
+}
+.user-image{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+}

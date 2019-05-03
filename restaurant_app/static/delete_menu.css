@@ -1,0 +1,20 @@
+.content-wrapper{
+    background-color: white;
+}
+.content{
+    padding:1rem;
+}
+
+.heading-font{
+    font-family: 'Architects Daughter', cursive;
+}
+
+.update-btn{
+    color: white;
+    background-color: rgb(245, 97, 97);
+    padding: 1rem;
+    width: 20rem;
+    border-radius: 5px;
+    font-family: 'Itim', cursive;
+    font-size:large;
+}
